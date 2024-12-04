@@ -22,7 +22,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push nsinghvs08/test:nodeapp:$BUILD_NUMBER'
+                sh 'docker push nsinghvs08/test:nodeapp'
             }
         }
 }
