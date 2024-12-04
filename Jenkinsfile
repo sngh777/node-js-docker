@@ -16,17 +16,17 @@ pipeline {
             }
         }
 
-        stage('Login to DockerHub') {
-            steps {
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-            }
-        }
+       // stage('Login to DockerHub') {
+          //  steps {
+           //     sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+         //   }
+       // }
 
-        stage('Push image') {
-            steps {
-                sh 'docker push nsinghvs08/nodeapp:$BUILD_NUMBER'
-            }
-        }
+       // stage('Push image') {
+           // steps {
+          //      sh 'docker push nsinghvs08/nodeapp:$BUILD_NUMBER'
+        //    }
+      //  }
 
         stage('Run Docker container locally') {
             steps {
