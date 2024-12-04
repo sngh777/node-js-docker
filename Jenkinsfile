@@ -6,7 +6,7 @@ pipeline {
     stages { 
         stage('SCM Checkout') {
             steps{
-            git 'https://github.com/sngh777/node-js-docker.git'
+             git branch: 'main', url: 'https://github.com/sngh777/node-js-docker.git'
             }
         }
 
