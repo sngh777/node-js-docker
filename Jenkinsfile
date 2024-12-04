@@ -41,8 +41,8 @@ pipeline {
             sh 'docker logout'
 
             // Stop and remove the container after the job completes
-            sh 'docker stop nodeapp-$BUILD_NUMBER || true'
-            sh 'docker rm nodeapp-$BUILD_NUMBER || true'
+  //          sh 'docker stop nodeapp-$BUILD_NUMBER || true'
+    //        sh 'docker rm nodeapp-$BUILD_NUMBER || true'
         }
     }
 }
